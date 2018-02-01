@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using System.Net.Http.Formatting;
 
 namespace FixerExchange
 {
@@ -17,6 +18,8 @@ namespace FixerExchange
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonMediaTypeFormatter());
             // Web API routes
             config.MapHttpAttributeRoutes();
 
