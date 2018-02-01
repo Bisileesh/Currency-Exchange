@@ -41,6 +41,12 @@ namespace FixerExchange.Controllers
             }
             return response;
         }
+
+        public string Index()
+        {
+
+            return "Home";
+        }
     }
 
 

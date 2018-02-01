@@ -85,5 +85,5 @@ D:\Fixer\FixerExchange\FixerExchange\bin\Microsoft.Owin.Security.Google.xml
 D:\Fixer\FixerExchange\FixerExchange\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Fixer\FixerExchange\FixerExchange\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Fixer\FixerExchange\FixerExchange\bin\System.Web.Http.Owin.xml
-D:\Fixer\FixerExchange\FixerExchange\obj\Debug\FixerExchange.dll
-D:\Fixer\FixerExchange\FixerExchange\obj\Debug\FixerExchange.pdb
+D:\Fixer\FixerExchange\FixerExchange\obj\Release\FixerExchange.dll
+D:\Fixer\FixerExchange\FixerExchange\obj\Release\FixerExchange.pdb
