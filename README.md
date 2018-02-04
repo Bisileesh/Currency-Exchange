@@ -46,6 +46,48 @@ To know about the currencies supported by Fixer, please refer: [**http://fixer.i
 #### Try it out!
 Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR)
 
+### Currency Layer
+Get the latest foreign currency exchange rates from **currencylayer.com**. In order to specify the provider or the source of rates, use the query parameter called `provider`.
+
+#### Endpoint
+```http
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR
+```
+
+#### Response Format
+Currency Exchange API supports two formats: `text` and `json`. In order to specify the format, use the query parameter called `format`. The default response format is `text`.
+
+```http
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR&format=text
+```
+
+```http
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR&format=json
+```
+
+A JSON response would be structured like as shown below:
+
+```json
+{
+   "success":true,
+   "terms":"https:\/\/currencylayer.com\/terms",
+   "privacy":"https:\/\/currencylayer.com\/privacy",
+   "timestamp":1517758336,
+   "source":"USD",
+   "quotes":{
+      "USDINR":64.119003
+   }
+}
+```
+
+#### Supported Rates
+To know about the currencies supported by currencylayer, please refer: [**https://currencylayer.com/**](https://currencylayer.com/).
+
+> currencylayer's free plan only supports **USD** as the source/from currency.
+
+#### Try it out!
+Click on this link to initiate a `GET` request: [**http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
+
 ## OpenAPI Specification(Swagger Specification)
 ```json
 {
