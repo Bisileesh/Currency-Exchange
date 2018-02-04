@@ -77,6 +77,13 @@ Click on this link to initiate a `GET` request: [**https://currency-exchange.app
                     },
                     {
                         "in":"query",
+                        "name":"apikey",
+                        "description":"Some providers like currencylayer.com requires an API Key",
+                        "required":false,
+                        "type":"string"
+                    },
+                    {
+                        "in":"query",
                         "name":"from",
                         "description":"Source currency",
                         "required":true,
