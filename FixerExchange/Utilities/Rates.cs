@@ -14,5 +14,7 @@ namespace FixerExchange.Utilities
         public string To { get; set; }
 
         public string Format { get; set; }
+
+        public string ApiKey { get; set; }
     }
 }
