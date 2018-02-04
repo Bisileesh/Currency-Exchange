@@ -43,7 +43,8 @@ A JSON response would be structured like as shown below:
 #### Supported Rates
 To know about the currencies supported by Fixer, please refer: https://api.fixer.io/latest
 
-Watch out this space for more providers 😊 
+#### Try it out!
+Click on this link to initiate a `GET` request: **https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR**
 
 ## License
 Code is under the **MIT License**.
