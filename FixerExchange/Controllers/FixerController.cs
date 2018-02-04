@@ -18,9 +18,9 @@ namespace FixerExchange.Controllers
         // GET: Fixer
 
         [System.Web.Http.Route("api/rates")]
-        public string GetRatesByCurrency([FromUri] Rates rate)
+        public object GetRatesByCurrency([FromUri] Rates rate)
         {
-            string response = string.Empty;
+            object response = string.Empty;
             try
             {
                 RateFactory concreteFactory = new ConcreteRateFactory();

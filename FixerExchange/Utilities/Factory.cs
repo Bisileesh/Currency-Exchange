@@ -11,7 +11,7 @@ namespace FixerExchange.Utilities
 {
     public interface IRateFactory
     {
-        string GetRateValue(Rates inputRates);
+        object GetRateValue(Rates inputRates);
     }
 
     public abstract class RateFactory
@@ -34,9 +34,9 @@ namespace FixerExchange.Utilities
 
     public class Fixer : IRateFactory
     {
-        public string GetRateValue(Rates inputRates)
+        public object GetRateValue(Rates inputRates)
         {
-            string response = string.Empty;
+            object response = string.Empty;
             try
             {
                 Rates rateValues = ConfigManager.GetRatesInstance(inputRates);
@@ -54,7 +54,7 @@ namespace FixerExchange.Utilities
                     else
                     {
                         var data = (JObject)JsonConvert.DeserializeObject(jsonResponse);
-                        response = data.Last.First.First.Last.Value<string>();
+                        response = data.Last.First.First.Last.Value<object>();
                     }
                 }
             }
@@ -68,15 +68,16 @@ namespace FixerExchange.Utilities
 
     public class CurrencyLayer : IRateFactory
     {
-        public string GetRateValue(Rates inputRates)
+        public object GetRateValue(Rates inputRates)
         {
-            string response = string.Empty;
+            object response = string.Empty;
             try
             {
                 Rates rateValues = ConfigManager.GetRatesInstance(inputRates);
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(ConfigManager.GetConfigValue(rateValues.Provider));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                //currencylayer only supports USD as the source/from currency
                 HttpResponseMessage apiResponse = client.GetAsync("api/live?" + "access_key=" + rateValues.ApiKey + "&currencies=" + rateValues.To).Result;  // Blocking call 
                 if (apiResponse.IsSuccessStatusCode)
                 {
@@ -88,7 +89,7 @@ namespace FixerExchange.Utilities
                     else
                     {
                         var data = (JObject)JsonConvert.DeserializeObject(jsonResponse);
-                        response = data.Last.First.First.Last.Value<string>();
+                        response = data.Last.First.First.Last.Value<object>();
                     }
                 }
             }
