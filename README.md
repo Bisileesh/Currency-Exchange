@@ -41,10 +41,75 @@ A JSON response would be structured like as shown below:
 ```
 
 #### Supported Rates
-To know about the currencies supported by Fixer, please refer: [**https://api.fixer.io/latest**](https://api.fixer.io/latest)
+To know about the currencies supported by Fixer, please refer: [**http://fixer.io/**](http://fixer.io/)
 
 #### Try it out!
 Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR)
+
+## OpenAPI Specification(Swagger Specification)
+```json
+{
+    "swagger":"2.0",
+    "info":{
+        "description":"Convert currency from one unit to the other",
+        "version":"1.0.0",
+        "title":"Currency-Exchange"
+    },
+    "host":"currency-exchange.apphb.com",
+    "schemes":[
+        "https",
+        "http"
+    ],
+    "paths":{
+        "/api/rates":{
+            "get":{
+                "summary":"Convert currency from one unit to the other",
+                "produces":[
+                    "text/plain"
+                ],
+                "parameters":[
+                    {
+                        "in":"query",
+                        "name":"provider",
+                        "description":"Source of currency exchange rates(fixer, currencylayer etc)",
+                        "required":true,
+                        "type":"string"
+                    },
+                    {
+                        "in":"query",
+                        "name":"from",
+                        "description":"Source currency",
+                        "required":true,
+                        "type":"string"
+                    },
+                    {
+                        "in":"query",
+                        "name":"to",
+                        "description":"Target currency",
+                        "required":true,
+                        "type":"string"
+                    },
+                    {
+                        "in":"query",
+                        "name":"format",
+                        "description":"Return type of the response",
+                        "required":true,
+                        "type":"string"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"Currency exchange rate",
+                        "schema":{
+                            "type":"string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
 
 ## License
 Code is under the **MIT License**.
