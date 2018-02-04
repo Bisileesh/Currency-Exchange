@@ -86,7 +86,7 @@ To know about the currencies supported by currencylayer, please refer: [**https:
 > currencylayer's free plan only supports **USD** as the source/from currency.
 
 #### Try it out!
-Click on this link to initiate a `GET` request: [**http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
+Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
 
 ## OpenAPI Specification(Swagger Specification)
 ```json
