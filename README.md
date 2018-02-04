@@ -9,7 +9,7 @@ The intention of this API is to bring multiple other currency conversion APIs un
 
 ## Usage
 
-### _Provider_: Fixer
+### Fixer
 Get the latest foreign currency exchange rates from **Fixer**. In order to specify the provider or the source of rates, use the query parameter called `provider`.
 
 #### Endpoint
