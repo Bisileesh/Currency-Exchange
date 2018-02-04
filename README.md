@@ -6,10 +6,10 @@ A public instance of the API lives at **https://currency-exchange.apphb.com** an
 
 The intention of this API is to bring multiple other currency conversion APIs under one hood. The Currency Exchange API does not store any rates and instead invokes the provider APIs to obtain the latest exchange rates. Thus the available or supported currencies depends solely on the provider. In essence, Currency Exchange API can be thought of as a proxy.
 
+
 ## Usage
 
 ### _Provider_: Fixer
-
 Get the latest foreign currency exchange rates from **Fixer**. In order to specify the provider or the source of rates, use the query parameter called `provider`.
 
 #### Endpoint
@@ -18,7 +18,6 @@ GET /api/rates?provider=fixer&from=USD&to=INR
 ```
 
 #### Response Format
-
 Currency Exchange API supports two formats: `text` and `json`. In order to specify the format, use the query parameter called `format`. The default response format is `text`.
 
 ```http
@@ -40,15 +39,15 @@ A JSON response would be structured like as shown below:
    }
 }
 ```
-#### Supported Rates
 
+#### Supported Rates
 To know about the currencies supported by Fixer, please refer: https://api.fixer.io/latest
 
-Watch out this space for more providers :-)
+Watch out this space for more providers 😊 
 
 ## License
-Code is under the [BSD 2-clause "Simplified" License](https://github.com/Homebrew/brew/tree/master/LICENSE.txt).
-Documentation is under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/).
+Code is under the **MIT License**.
+Documentation is under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Disclaimer
 > The API comes with no warranty. Please cache results whenever possible.
