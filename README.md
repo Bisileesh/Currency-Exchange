@@ -46,8 +46,6 @@ To know about the currencies supported by Fixer, please refer: [**http://fixer.i
 #### Try it out!
 Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR)
 
-<<<<<<< HEAD
-=======
 ### Currency Layer
 Get the latest foreign currency exchange rates from **currencylayer.com**. In order to specify the provider or the source of rates, use the query parameter called `provider`.
 
@@ -88,7 +86,7 @@ To know about the currencies supported by currencylayer, please refer: [**https:
 > currencylayer's free plan only supports **USD** as the source/from currency.
 
 #### Try it out!
-Click on this link to initiate a `GET` request: [**http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
+Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
 
 >>>>>>> parent of 28039e2... Update README.md
 ## OpenAPI Specification(Swagger Specification)
