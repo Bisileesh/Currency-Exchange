@@ -88,7 +88,6 @@ To know about the currencies supported by currencylayer, please refer: [**https:
 #### Try it out!
 Click on this link to initiate a `GET` request: [**https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](http://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
 
->>>>>>> parent of 28039e2... Update README.md
 ## OpenAPI Specification(Swagger Specification)
 ```json
 {
