@@ -44,7 +44,7 @@ namespace FixerExchange.Utilities
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(ConfigManager.GetConfigValue(rateValues.Provider));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage apiResponse = client.GetAsync("latest?base=" + rateValues.From + "&symbols=" + rateValues.To + "").Result;  // Blocking call 
+                HttpResponseMessage apiResponse = client.GetAsync("latest?base=" + rateValues.Fr + "&symbols=" + rateValues.To + "").Result;  // Blocking call 
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     string jsonResponse = apiResponse.Content.ReadAsStringAsync().Result;
@@ -113,7 +113,7 @@ namespace FixerExchange.Utilities
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(ConfigManager.GetConfigValue(rateValues.Provider));
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage apiResponse = client.GetAsync("api/v5/convert?" + "q=" + rateValues.From + "_" + rateValues.To).Result;  // Blocking call 
+                HttpResponseMessage apiResponse = client.GetAsync("api/v5/convert?" + "q=" + rateValues.Fr + "_" + rateValues.To).Result;  // Blocking call 
                 if (apiResponse.IsSuccessStatusCode)
                 {
                     string jsonResponse = apiResponse.Content.ReadAsStringAsync().Result;

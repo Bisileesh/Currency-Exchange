@@ -31,7 +31,7 @@ namespace FixerExchange.Utilities
                 //Get query string values
                 string apikey = inputRates.ApiKey;
                 string provider = inputRates.Provider;
-                string currency = inputRates.From;
+                string currency = inputRates.Fr;
                 string symbol = inputRates.To;
                 string format = inputRates.Format;
                 if (string.IsNullOrEmpty(provider))
@@ -59,7 +59,7 @@ namespace FixerExchange.Utilities
                 resultRates = new Rates();
                 resultRates.ApiKey = apikey;
                 resultRates.Format = format;
-                resultRates.From = currency;
+                resultRates.Fr = currency;
                 resultRates.To = symbol;
                 resultRates.Format = format;
                 resultRates.Provider = provider;

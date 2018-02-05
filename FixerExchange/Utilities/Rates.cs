@@ -9,7 +9,7 @@ namespace FixerExchange.Utilities
     {
         public string Provider { get; set; }
 
-        public string From { get; set; }
+        public string Fr { get; set; }
 
         public string To { get; set; }
 
