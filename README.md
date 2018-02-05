@@ -112,11 +112,17 @@ GET /api/rates?provider=currencyconverterapi&from=USD&to=INR&format=json
 A JSON response would be structured like as shown below:
 
 ```json
-{  
-   "base":"USD",
-   "date":"2018-02-02",
-   "rates":{  
-      "INR":64.057
+{
+   "query":{
+      "count":1
+   },
+   "results":{
+      "USD_INR":{
+         "id":"USD_INR",
+         "val":64.112503,
+         "to":"INR",
+         "fr":"USD"
+      }
    }
 }
 ```
