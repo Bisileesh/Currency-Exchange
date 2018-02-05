@@ -90,6 +90,14 @@ Click this link to obtain the current rate for 1 USD in INR: [**https://currency
 
 > Please do not use the API Key used in the above sample call for any live applications.
 
+## To Dos
+- [x] Add support for currencylayer.com
+- [ ] Add support for currencyconverterapi.com
+- [ ] Add support for 1Forge.com
+- [ ] Better Exception Handling
+- [ ] More Unit Tests
+- [ ] Add an index.html to the live site with proper description as in the Readme.md
+
 ## License
 Code is under the **MIT License**.
 Documentation is under the [MIT License](https://opensource.org/licenses/MIT).
