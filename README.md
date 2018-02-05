@@ -14,18 +14,18 @@ Get the latest foreign currency exchange rates from **Fixer**. In order to speci
 
 #### Endpoint
 ```http
-GET /api/rates?provider=fixer&from=USD&to=INR
+GET /api/rates?provider=fixer&fr=USD&to=INR
 ```
 
 #### Response Format
 Currency Exchange API supports two formats: `text` and `json`. In order to specify the format, use the query parameter called `format`. The default response format is `text`.
 
 ```http
-GET /api/rates?provider=fixer&from=USD&to=INR&format=text
+GET /api/rates?provider=fixer&fr=USD&to=INR&format=text
 ```
 
 ```http
-GET /api/rates?provider=fixer&from=USD&to=INR&format=json
+GET /api/rates?provider=fixer&fr=USD&to=INR&format=json
 ```
 
 A JSON response would be structured like as shown below:
@@ -44,25 +44,25 @@ A JSON response would be structured like as shown below:
 To know about the currencies supported by Fixer, please refer: [**http://fixer.io/**](http://fixer.io/)
 
 #### Try it Out!
-Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=fixer&from=USD&to=INR)
+Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?provider=fixer&fr=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=fixer&fr=USD&to=INR)
 
 ### Currency Layer
 Get the latest foreign currency exchange rates from **currencylayer.com**. In order to specify the provider or the source of rates, use the query parameter called `provider`.
 
 #### Endpoint
 ```http
-GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&fr=USD&to=INR
 ```
 
 #### Response Format
 Currency Exchange API supports two formats: `text` and `json`. In order to specify the format, use the query parameter called `format`. The default response format is `text`.
 
 ```http
-GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR&format=text
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&fr=USD&to=INR&format=text
 ```
 
 ```http
-GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&from=USD&to=INR&format=json
+GET /api/rates?provider=currencylayer&apikey=[YOUR_API_KEY]&fr=USD&to=INR&format=json
 ```
 
 A JSON response would be structured like as shown below:
@@ -86,7 +86,7 @@ To know about the currencies supported by currencylayer, please refer: [**https:
 > currencylayer's free plan only supports **USD** as the source/from currency.
 
 #### Try it Out!
-Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&from=USD&to=INR)
+Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&fr=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?apikey=0437ce11a7751b8b4e8af994486a1d9d&provider=currencylayer&fr=USD&to=INR)
 
 > Please do not use the API Key used in the above sample call for any live applications.
 
@@ -95,18 +95,18 @@ Get the latest foreign currency exchange rates from **currencyconverterapi.com**
 
 #### Endpoint
 ```http
-GET /api/rates?provider=currencyconverterapi&from=USD&to=INR
+GET /api/rates?provider=currencyconverterapi&fr=USD&to=INR
 ```
 
 #### Response Format
 Currency Exchange API supports two formats: `text` and `json`. In order to specify the format, use the query parameter called `format`. The default response format is `text`.
 
 ```http
-GET /api/rates?provider=currencyconverterapi&from=USD&to=INR&format=text
+GET /api/rates?provider=currencyconverterapi&fr=USD&to=INR&format=text
 ```
 
 ```http
-GET /api/rates?provider=currencyconverterapi&from=USD&to=INR&format=json
+GET /api/rates?provider=currencyconverterapi&fr=USD&to=INR&format=json
 ```
 
 A JSON response would be structured like as shown below:
@@ -131,7 +131,7 @@ A JSON response would be structured like as shown below:
 To know about the currencies supported by currencyconverterapi.com, please refer: [**https://free.currencyconverterapi.com/**](https://free.currencyconverterapi.com/)
 
 #### Try it Out!
-Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?provider=currencyconverterapi&from=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=currencyconverterapi&from=USD&to=INR)
+Click this link to obtain the current rate for 1 USD in INR: [**https://currency-exchange.apphb.com/api/rates?provider=currencyconverterapi&fr=USD&to=INR**](https://currency-exchange.apphb.com/api/rates?provider=currencyconverterapi&fr=USD&to=INR)
 
 ## To Dos
 - [x] Add support for currencylayer.com
