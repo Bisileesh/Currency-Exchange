@@ -27,6 +27,7 @@ namespace FixerExchange.Utilities
             {
                 case "FIXER": return new Fixer();
                 case "CURRENCYLAYER": return new CurrencyLayer();
+                case "CURRENCYCONVERTERAPI": return new CurrencyConverterAPI();
                 default: return null;
             }
         }
@@ -90,6 +91,40 @@ namespace FixerExchange.Utilities
                     {
                         var data = (JObject)JsonConvert.DeserializeObject(jsonResponse);
                         response = data.Last.First.First.Last.Value<object>();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                response = ex.ToString();
+            }
+            return response;
+        }
+    }
+
+    public class CurrencyConverterAPI : IRateFactory
+    {
+        public object GetRateValue(Rates inputRates)
+        {
+            object response = string.Empty;
+            try
+            {
+                Rates rateValues = ConfigManager.GetRatesInstance(inputRates);
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(ConfigManager.GetConfigValue(rateValues.Provider));
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage apiResponse = client.GetAsync("api/v5/convert?" + "q=" + rateValues.From + "_" + rateValues.To).Result;  // Blocking call 
+                if (apiResponse.IsSuccessStatusCode)
+                {
+                    string jsonResponse = apiResponse.Content.ReadAsStringAsync().Result;
+                    if (rateValues.Format == "JSON")
+                    {
+                        response = jsonResponse;
+                    }
+                    else
+                    {
+                        var data = (JObject)JsonConvert.DeserializeObject(jsonResponse);
+                        response = data.Last.First.First.Last.SelectToken("val").Value<object>();
                     }
                 }
             }

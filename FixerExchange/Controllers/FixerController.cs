@@ -16,7 +16,6 @@ namespace FixerExchange.Controllers
 
     {
         // GET: Fixer
-
         [System.Web.Http.Route("api/rates")]
         public object GetRatesByCurrency([FromUri] Rates rate)
         {
